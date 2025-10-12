@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/sakila
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+  flyway:
+    enabled: true
+
+server:
+  port: 8080
+
+app:
+  security:
+    jwt:
+      secret: "change-me-please-change-me-please-change-me"
+      expiration: 86400000 # 1 day
